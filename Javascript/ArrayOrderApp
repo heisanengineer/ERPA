@@ -1,0 +1,100 @@
+/* 
+    1- Sipariş bilgilerini object içerisinde sakla.
+    2- Her siparişin ayrı ayrı kdv dahil toplam ödenen ücreti hesapla. (kdv: %20)
+    3- Tüm siparişlerin kdv dahil toplam ödenen ücretini hesapla.
+
+    sipariş id: 101
+    sipariş tarihi: 31.12.2022
+    ödeme şekli: kredi kartı
+    kargo adresi: Yahya kaptan mah. Kocaeli İzmit
+    satın alınan ürünler: 
+        ürün id: 5
+        ürün başlığı: IPhone 13 Pro
+        ürün url: http://abc.com/iphone-13-pro
+        ürün fiyatı: 22000
+
+        ürün id: 6
+        ürün başlığı: IPhone 13 Pro Max
+        ürün url: http://abc.com/iphone-13-pro-max
+        ürün fiyatı: 25000
+
+    müşteri:
+        müşteri id: 12
+        
+    satıcı:
+        firma id: 34
+        firma adı: Apple Türkiye
+
+    sipariş id: 102
+    sipariş tarihi: 30.12.2022
+    ödeme şekli: kredi kartı
+    kargo adresi: Yahya kaptan mah. Kocaeli İzmit
+    satın alınan ürünler: 
+
+        ürün id: 6
+        ürün başlığı: IPhone 13 Pro Max
+        ürün url: http://abc.com/iphone-13-pro-max
+        ürün fiyatı: 25000
+
+    müşteri:
+        müşteri id: 12
+        
+    satıcı:
+        firma id: 34
+        firma adı: Apple Türkiye
+
+*/
+
+let order1 = {
+    "order_id" : 101,
+    "order_date" : "14.6.2024",
+    "order_type":"credit card",
+    "order_adress": {
+        "City":"Ankara",
+        "Street":"5350. Cad",
+        "Adress":"Etimesgut",
+    },
+    "order_products":[
+        {
+        "product_id":"5",
+        "product_name":"IPhone 13 Pro",
+        "product_url":"https://abc.com/iphone-13-pro",
+        "product_price":"22000",
+    },
+    {
+        "product_id":"6",
+        "product_name":"IPhone 13 Pro Max",
+        "product_url":"https://abc.com/iphone-13-pro-max",
+        "product_price":"22000",
+    }]
+}
+
+let order2 = {
+    "order_id" : 102,
+    "order_date" : "14.6.2024",
+    "order_type":"credit card",
+    "order_adress": {
+        "City":"Ankara",
+        "Street":"5350. Cad",
+        "Adress":"Etimesgut",
+    },
+    "order_products":[
+    {
+        "product_id":"6",
+        "product_name":"IPhone 13 Pro Max",
+        "product_url":"https://abc.com/iphone-13-pro-max",
+        "product_price":"25000",
+    }]
+}
+
+let orderSum1 = (order1.order_products[0].product_price + order1.order_products[1].product_price) * 1.20;
+let orderSum2 = (order1.order_products[0].product_price) * 1.20;
+
+let sum_order = orderSum1 + orderSum2;
+
+console.log("Order 1 Summary: ", orderSum1);
+console.log("Order 1 Summary: ", orderSum2);
+
+console.log("Order Summary: ", sum_order);
+let orders = [order1,order2];
+
