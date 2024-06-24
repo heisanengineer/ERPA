@@ -5,8 +5,8 @@ sonuc = document.getElementById("title").id;
 sonuc = document.getElementById("title").className;
 sonuc = document.getElementById("title").classList;
 
-document.getElementById("title").style.fontSize="30px";
-document.getElementById("title").style.color="blue";
+document.getElementById("title").style.fontSize = "30px";
+document.getElementById("title").style.color = "blue";
 
 document.getElementById("title").innerText = "Todo App";
 

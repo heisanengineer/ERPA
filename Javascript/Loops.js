@@ -26,7 +26,6 @@ for (let key in user) {
   console.log(user[key]);
 }
 
-
 let sayilar2 = [1, 5, 7, 15, 3, 25, 12, 24];
 
 let urunler = [
@@ -47,7 +46,6 @@ for (let num of sayilar2) {
   console.log(Math.pow(num, 2));
 }
 
-
 // 2- sayilar listesindeki hangi sayılar 5' in katıdır?
 
 for (let num in sayilar2) {
@@ -66,8 +64,6 @@ for (let num of sayilar2) {
 }
 console.log(sum);
 
-
-
 // 4- urunler listesindeki tüm ürünleri büyük harf ile yazdırınız.
 
 for (let i = 0; i < urunler.length; i++) {
@@ -83,7 +79,6 @@ for (let i = 0; i < urunler.length; i++) {
   }
 }
 
-
 let ogrenciler = [
   { ad: "yiğit", soyad: "bilgi", notlar: [60, 70, 60] },
   { ad: "ada", soyad: "bilgi", notlar: [80, 70, 80] },
@@ -93,18 +88,23 @@ let ogrenciler = [
 // ogrenciler listesindeki her öğrencinin not ortalaması ve başarı durumlarını yazdırınız.
 
 for (let ogrenci of ogrenciler) {
-    let toplamNot = ogrenci.notlar.reduce((acc, not) => acc + not, 0);
-    let notOrtalamasi = toplamNot / ogrenci.notlar.length;
-    let basariDurumu = notOrtalamasi >= 50 ? "Geçti" : "Kaldı";
-  
-    console.log(`${ogrenci.ad} ${ogrenci.soyad}: Not Ortalaması - ${notOrtalamasi.toFixed(2)}, Başarı Durumu - ${basariDurumu}`);
-  }
+  let toplamNot = ogrenci.notlar.reduce((acc, not) => acc + not, 0);
+  let notOrtalamasi = toplamNot / ogrenci.notlar.length;
+  let basariDurumu = notOrtalamasi >= 50 ? "Geçti" : "Kaldı";
+
+  console.log(
+    `${ogrenci.ad} ${ogrenci.soyad}: Not Ortalaması - ${notOrtalamasi.toFixed(
+      2
+    )}, Başarı Durumu - ${basariDurumu}`
+  );
+}
 
 // tüm öğrencilerin not ortalaması kaçtır?
 
 let toplamNot = ogrenciler.reduce((acc, ogrenci) => {
-    return acc + ogrenci.notlar.reduce((acc, not) => acc + not, 0);
-  }, 0);
-  
-  let notOrtalamasi = toplamNot / (ogrenciler.length * ogrenciler[0].notlar.length);
-  console.log(notOrtalamasi);
+  return acc + ogrenci.notlar.reduce((acc, not) => acc + not, 0);
+}, 0);
+
+let notOrtalamasi =
+  toplamNot / (ogrenciler.length * ogrenciler[0].notlar.length);
+console.log(notOrtalamasi);

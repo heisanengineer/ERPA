@@ -22,7 +22,7 @@ sonuc = simdi.setHours(15);
 sonuc = simdi.setMinutes(30);
 sonuc = simdi.setSeconds(53);
 
-let dogumTarihi = new Date(1990,5,15);
+let dogumTarihi = new Date(1990, 5, 15);
 
 sonuc = simdi.getFullYear() - dogumTarihi.getFullYear();
 

@@ -46,49 +46,54 @@
 */
 
 let order1 = {
-    "order_id" : 101,
-    "order_date" : "14.6.2024",
-    "order_type":"credit card",
-    "order_adress": {
-        "City":"Ankara",
-        "Street":"5350. Cad",
-        "Adress":"Etimesgut",
-    },
-    "order_products":[
-        {
-        "product_id":"5",
-        "product_name":"IPhone 13 Pro",
-        "product_url":"https://abc.com/iphone-13-pro",
-        "product_price":"22000",
+  order_id: 101,
+  order_date: "14.6.2024",
+  order_type: "credit card",
+  order_adress: {
+    City: "Ankara",
+    Street: "5350. Cad",
+    Adress: "Etimesgut",
+  },
+  order_products: [
+    {
+      product_id: "5",
+      product_name: "IPhone 13 Pro",
+      product_url: "https://abc.com/iphone-13-pro",
+      product_price: "22000",
     },
     {
-        "product_id":"6",
-        "product_name":"IPhone 13 Pro Max",
-        "product_url":"https://abc.com/iphone-13-pro-max",
-        "product_price":"22000",
-    }]
-}
+      product_id: "6",
+      product_name: "IPhone 13 Pro Max",
+      product_url: "https://abc.com/iphone-13-pro-max",
+      product_price: "22000",
+    },
+  ],
+};
 
 let order2 = {
-    "order_id" : 102,
-    "order_date" : "14.6.2024",
-    "order_type":"credit card",
-    "order_adress": {
-        "City":"Ankara",
-        "Street":"5350. Cad",
-        "Adress":"Etimesgut",
-    },
-    "order_products":[
+  order_id: 102,
+  order_date: "14.6.2024",
+  order_type: "credit card",
+  order_adress: {
+    City: "Ankara",
+    Street: "5350. Cad",
+    Adress: "Etimesgut",
+  },
+  order_products: [
     {
-        "product_id":"6",
-        "product_name":"IPhone 13 Pro Max",
-        "product_url":"https://abc.com/iphone-13-pro-max",
-        "product_price":"25000",
-    }]
-}
+      product_id: "6",
+      product_name: "IPhone 13 Pro Max",
+      product_url: "https://abc.com/iphone-13-pro-max",
+      product_price: "25000",
+    },
+  ],
+};
 
-let orderSum1 = (order1.order_products[0].product_price + order1.order_products[1].product_price) * 1.20;
-let orderSum2 = (order1.order_products[0].product_price) * 1.20;
+let orderSum1 =
+  (order1.order_products[0].product_price +
+    order1.order_products[1].product_price) *
+  1.2;
+let orderSum2 = order1.order_products[0].product_price * 1.2;
 
 let sum_order = orderSum1 + orderSum2;
 
@@ -96,5 +101,4 @@ console.log("Order 1 Summary: ", orderSum1);
 console.log("Order 1 Summary: ", orderSum2);
 
 console.log("Order Summary: ", sum_order);
-let orders = [order1,order2];
-
+let orders = [order1, order2];
