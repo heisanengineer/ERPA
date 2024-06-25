@@ -21,6 +21,11 @@ var models = [
     }
 ];
 
+var settings = {
+    duration: 2000,
+    random: true
+};
+var interval;
 var index = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -42,6 +47,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    document.querySelectorAll(".arrow").forEach(function(item){
+        item.addEventListener('mouseenter', function(){
+            clearInterval(interval);
+        })
+    });
+
+    document.querySelectorAll(".arrow").forEach(function(item){
+        item.addEventListener('mouseover', function(){
+            init(settings);
+        })
+    });
+    
     function updateCard() {
         cardImage.setAttribute("src", models[index].image);
         cardTitle.textContent = models[index].name;
@@ -49,6 +66,19 @@ document.addEventListener("DOMContentLoaded", function() {
             cardLink.setAttribute("href", models[index].link);
         }
     }
-    
+
+    function init(settings) {
+        interval = setInterval(function() {
+            if (settings.random) {
+                index = Math.floor(Math.random() * models.length);
+            }
+            updateCard();
+        }, settings.duration);
+    }
+
+    // Otomatik geçiş için init fonksiyonunu çağır
+    init(settings);
+
+    // İlk kartı yükle
     updateCard();
 });
