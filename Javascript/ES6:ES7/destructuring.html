@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-12-68e8a04b140b8f48e98b95f74b71e3f8%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Ddestructuring.html%26Expires%3D1719518725%26Signature%3DJ2qC3rQQy8CULU7iakFBP9oFEk-NRg61rX5VTcm3IEHI0OWaFQRjUQ0bFZInhNyxQvMwxyeT0XXz5OQ-MUUcDG8tUM3AH09fn0cJyaNHFMk6LMOkcXYZKUoF3OaoP9kfDmhZ0UlhoTSFF171l5rj7AaI0v6kCbzEwtw9nGAyECVNmoWqrzO7mjO8UpHdjZbGOPUgeu0YORwaWFQV0TCK-9nhayDGGMfW4-SgSgTX9RnteOerILTvG37RyKWNerqeIGn~5wlY~cHFAWdIeL0kMatcgTS8STz0vjmX6-9iqBsXTWs5n~4m75-2PW2H5mbjFd8VzfJ6lahyyorSrPYlqw__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+
+
+    <script>
+
+        // array destructuring
+        let user = ["sadık","turan","kocaeli","izmit","41000"];
+
+        // let firstName = name[0];
+        // let lastName = name[1];
+
+        // let [firstName, lastName] = name;
+        // let [firstName, lastName] = "Sadık Turan".split(" ");
+        let [firstName, lastName, ...address] = user;
+
+        console.log(firstName, lastName, address);
+
+        // object destructuring
+        let urun = {
+            marka: "Apple",
+            model: "IPhone 12",
+            fiyat: 10000
+        }
+
+        function urunGoster(obj) {
+            let {marka, model, fiyat = 0, satisDurumu = false} = obj;
+            console.log(marka, model, fiyat, satisDurumu);
+        }
+
+        urunGoster(urun);
+
+    </script>
+</body>
+</html>

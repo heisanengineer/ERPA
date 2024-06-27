@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-48-53-5543f24d468c15b300636ecad6fce0e6%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Darrow-functions.html%26Expires%3D1719518717%26Signature%3DCv7DaH46r8CARPKyKr4LLAkEGxkEObtk4FlnsuI-qQfnsQBTk8kcoITzlFnpdFE8oJJanTrAGV8vUYBXroI~dZ4Q6dE1DwiS3agWqF3nLPEPikV~27KjS~vX1yXlCBO26mnjyaLnUARfYqq2Xis~F1iJw9H3DDidx73bdCnQ6d213QQlwuxdm1z~SFahGfq6UATpcM0aBqN21SxdJt1bDyGb87nONkWNXDaqo8wtdfs6jJHuZCrmo0YD8HX~8g1oxwzjrJmTYgDaFsqosaF0~63MoYo7dHwdPRD3ap2km9c22~794u46jMZ-UIICA2GXNqjzq2lt6DT0AjaC3nTQGQ__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+
+    <script>
+        // ES5
+
+        // function selamlama() {
+        //     console.log("merhaba");
+        // }
+
+        var selamlamaES5 = function(isim) {
+            console.log("merhaba " + isim);
+        }
+        selamlamaES5("ali");
+
+        // ES6 - arrow function
+        // const selamlamaES6 = () => console.log("merhaba");
+        const selamlamaES6 = (isim) => { console.log("merhaba " + isim); }
+
+        selamlamaES6("ahmet");
+
+        // ES5
+        var toplamES5 = function(a, b) {
+            return a + b;
+        }
+
+        var sonuc = toplamES5(10,20);
+        console.log(sonuc);
+
+        // ES6
+        // const toplamES6 = (a,b) => a + b;
+        const toplamES6 = (a,b) => { return a + b };
+
+        sonuc = toplamES6(20, 50);
+        console.log(sonuc);
+
+        </script>
+
+</body>
+</html>

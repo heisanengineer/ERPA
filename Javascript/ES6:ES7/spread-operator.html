@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-05-a731f9c1d97e9335208d6b8180f49abf%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dspread-operator.html%26Expires%3D1719518722%26Signature%3DmYxvoqDURvjt~RqFssCl1tGW42XZsaiw4jjb5eccKWa1iUAgFeLmdCCCPoSULhVa9iK7B7QHUoqvE3Tu~WIFounWg3w6NBrr-frZL4XGkT6obVpo0TAZJ6l4buYdn1kQxesG7oSxwYbt9N7Odnfzn6KX41H9iSS4p1zIDZpXfNNKJbF~yqpGZYv5-DHGSnQ34IuBYKUo7bYL~BPtpwJGaOVwEHhpOoaEsBcFhYPVEW5zDn8ZFmYrW1ZdU2DVMeSb0JD4DgjXdIGNlkJCh-4Jad~SoY06RJmPuS7K3bBILbx-pcjepZWhHltRV~VEU4iXoQvrNFWuikj0KYPU0WJG-g__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+
+    <script>
+        
+        // const msj = ["benim","adım","sadık","turan"];
+
+        // let sonuc = "";
+        // for(let x of msj) {
+        //     sonuc += x + " ";
+        // }
+        // console.log(sonuc);
+        
+        // console.log(...msj);
+
+        // const dizi1 = ["bir","iki"];
+        // const dizi2 = ["üç","dört"];
+
+        // const dizi3 = [...dizi1, ...dizi2,"beş","altı"];
+
+        // console.log(dizi3);
+
+        const sayilar1 = [1,2,3];
+        // const sayilar2 = sayilar1;   // referans copy
+        const sayilar2 = [...sayilar1]; // value copy
+
+        sayilar2[0] = 10;
+
+        console.log(sayilar1, sayilar2)
+
+        const user = {
+            username: "sadikturan",
+            email: "info@gmail.com"
+        }
+
+        const address = {
+            username: "abc",
+            city: "kocaeli"
+        }
+
+        console.log({...user, ...address});
+
+        // rest parameters
+        function toplam(...args) {
+            let sonuc = 0;
+
+            for (let sayi of args) {
+                sonuc += sayi;
+            } 
+            return sonuc;
+        }
+
+        console.log(toplam(1,3,5));
+        console.log(toplam(1,3,5,10,20));
+
+        function bilgileriGoster(isim, soyad, ...adres) {
+            console.log(isim, soyad, adres);
+        }
+
+        bilgileriGoster("ali","turan","istanbul","kadıköy")
+            
+    </script>
+
+</body>
+</html>

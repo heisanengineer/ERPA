@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-18-99937a8910a7ee09819a5452381038b8%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dmaps.html%26Expires%3D1719518726%26Signature%3Dj~tlhH6dkzhbC-T5TKgOnBFjuZXgUyUPZqzTEoXq4O5X-pZ30cuDQHAoCI9qyeGvZQItSDM~7XtRCsqYQk3L040ZSE3ZJQjOH1vjT-aqH-aCJdsgnsuLOaynGOOEJXT4KAZzqZo-nhrlMtrdqXqMAphjTtqlS5HuThaiO~n-iFIZrkra8KxO5be2Ax1mHtswpokA9eCP45aur8VNR6QuwyKJMUFtTi61~8-Nh~VddhE4UjLadjc1z3qmY48ThFwTUDfuO~Cdf3CAqHNbO0C-MImWdjyA8V6A0NijcvpUsQa8ssctoVjiCHSFQ2OflEy0U9qLLVSyxb~M5ynynzFevg__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="e1c3fc8084964876afd93211f69" src="//local.adguard.org?ts=1719470201902&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+    <script>
+
+        const ogrenciler = new Map();
+
+        let user = {username: "sadikturan"};
+
+        ogrenciler.set(1, "ali yılmaz");
+        ogrenciler.set("56444433333", "efe can");
+        ogrenciler.set(true, "ali can");
+        ogrenciler.set(user, "sadık turan");
+
+        console.log(ogrenciler.get(1));
+        console.log(ogrenciler.get("56444433333"));
+        console.log(ogrenciler.get(true));
+        console.log(ogrenciler.get(user));
+
+        let sonuc;
+
+        sonuc = ogrenciler.size;
+        sonuc = ogrenciler.has(2);
+        // ogrenciler.delete(1);
+        sonuc = ogrenciler.size;
+        // ogrenciler.clear();
+
+        // for(let x of ogrenciler.keys()) {
+        //     console.log(x);
+        // }
+
+        // for(let x of ogrenciler.values()) {
+        //     console.log(x);
+        // }
+
+        for(let [key,value] of ogrenciler.entries()) {
+            console.log(key, value);
+        }
+
+    </script>
+</body>
+</html>
