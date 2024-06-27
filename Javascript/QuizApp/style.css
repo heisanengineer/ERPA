@@ -4,7 +4,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .quiz_box.active {
@@ -162,4 +162,3 @@
     font-weight: 500;
     margin-bottom: 10px;
 }
-
