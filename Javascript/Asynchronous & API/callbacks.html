@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-20_18-41-48-6115b9f3ee366acb0807fe4faa243258%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dcallbacks.html%26Expires%3D1719600395%26Signature%3Dlwdbw8G3M8AZh2dzkdjVgae2e3tw08UJBlMD0ZVuciOUXMaF~G73MEfypOTZnrHBbJWel55rg9E8axMi0FJWWWwIWIirYj~K7pmJe2VzdQzN84XZL2hQ9Nlcgz2WL~DMoZhgfIsvy8a~MB6A8pMNpqSmu59wRsFjG2cN2Tma4XUaC7VxX~jMnBLoCqQfglWjrwJilEpPCngmW--iaZywEz2LzPaIhRpaYNq1K8ZvcDoyHQcUUs-vooyjTW9VMQiA40kg3M9lL~bBFhi4VYZKdOY5VTXUQYi9fZYQxO379rSSVrpj46Uk4SB6XaDDdLZucvneWD5eXgLoPCh0Y2pzPA__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+
+
+    <script>
+
+        // login    => username
+        // posts
+        // create post
+
+        // sipariş
+        // siparişin hazırlama
+
+        console.log("start");
+
+        const login = (username, password, callback) => {
+            setTimeout(() => {
+                callback( { username: username, email: "info@sadikturan.com" } )
+            },1000);
+        }
+
+        const getPostsByUsername = (username, callback) => {
+            setTimeout(() => {
+                callback(["post 1","post 2","post 3"]);
+            }, 2000)
+        }
+
+        const getPostDetails = (post, callback) => {
+            setTimeout(() => {
+                callback("post details");
+            }, 1000)
+        }
+
+        login("sadikturan","12345", user => {
+            console.log(user.username);
+            
+            getPostsByUsername(user.username, (posts) => {
+                console.log(posts);
+
+                getPostDetails(posts[0], (details) => {
+                    console.log(details);
+                })
+            });
+
+        });
+
+        // callback hell
+
+        console.log("end");
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-20_18-41-48-71930135643ddef4ed749b07c5ea6e74%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dajax.html%26Expires%3D1719600396%26Signature%3DYC~g0ESITymyHJVIOEzPNbidXivSQRjsbBqa4yfk3pikPFIXhdkwg8qsW9U8hEHnep6gV4JE1zWAWPPY0El~6LoNUmn8zd0EmZRMraPPO56f7Ym3C3V-nfsPqT2p-MvQpBHEnJVrS11EC900dHuP5yUoMXKife6Jc8rQXJi7iWJtibdnoJaXrSSn2yjt0RNgAT0sBfPAN7WKjGRwBbCHx6fXtvl3pLCN6alQRwem1iajKxODmjsanSrf7J8lfalLlkcoF6IrDScf6No8CkMf4hDSmXGzVGKqCrJYh3t94oSBQJuYfNe-H2-8a2iRA-bTIDDG6-VBRPsX2VJOxTlYDQ__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+   <!-- xml, json -->
+
+   <script>
+       const request = new XMLHttpRequest();
+
+       request.open('GET', 'https://restcountries.com/v3.1/name/turkey');
+       request.send();
+
+       // async
+
+       request.addEventListener('load', function() {
+            const data = JSON.parse(this.responseText);
+            console.log(typeof data);            
+            console.log(data[0]);            
+            // string to json
+
+       });
+   </script>
+    
+</body>
+</html>
