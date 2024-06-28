@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-32-ea73d3c8976f0afdd9f694231421d9e4%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dclass.html%26Expires%3D1719600219%26Signature%3DIzxOnpkbpyhajPA2uXU9PKTyBePO5M79HQsYDjZlZVvcuUlaMKDIYWBceQ1t4BWgZEmfGKyg-RN6dDQs1vD7Ppuo6nf69jHGZvCcs2T1jrmfRBMmNnLCpeQys7UMl9zNzYfx~~C0df8lXmMzqwZuM-1A~JRkwxPtenKnNnTQUjxMT~X2Z5ZcBvhER~uhGtjace6fqhYIZhrNGNNlCJz8bpEL09FYpZMWMYiS5uLP36L-eQh50KMBYBjfsW1lDHi6VRX5Se4SKnlaBTI-7LSVTwjNlofxX8VupxPH8yL8ewKDE-az6hxp9Jh8hedaR8rGe~~BbSQUHZvqa1oEkW4~4Q__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+    <script>
+
+        // function constructor
+        function KisiES5(ad, meslek, dogumYili) {
+            this.ad = ad;
+            this.meslek = meslek;
+            this.dogumYili = dogumYili;
+        }
+
+        KisiES5.prototype.yasHesapla = function() {
+            let tarih = new Date().getFullYear();
+            return tarih - this.dogumYili;
+        }
+
+        let emre = new KisiES5("emre yağcı", "öğrenci", 1990);
+        let ahmet = new KisiES5("ahmet yılmaz", "öğretmen", 1985);
+
+        console.log(emre.yasHesapla());
+        console.log(ahmet.yasHesapla());
+        
+        // class
+        class KisiES6 {
+            constructor(ad, meslek, dogumYili) {
+                this.ad = ad;
+                this.meslek = meslek;
+                this.dogumYili = dogumYili;
+                console.log("nesne oluşturuldu.");
+            }
+
+            yasHesapla() {
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+        }
+
+        let kisi1 = new KisiES6("çınar turan","öğrenci",2017);
+        let kisi2 = new KisiES6("ada bilgi","öğrenci",2012);
+
+        console.log(kisi1.yasHesapla());
+        console.log(kisi2.yasHesapla());
+        
+    </script>
+</body>
+</html>

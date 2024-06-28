@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-45-6b57f80a1d1f3c6ecf276da329fcf874%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dinheritance.html%26Expires%3D1719600224%26Signature%3DtWlxxc~pZj9dpangJP~gE3edHGsIemrtw0isSQdPYyaxSBU7ZHoZ1JhPWgQTSak9XvvrorHG4PA7uqFWDv66F5McjwjdOkeknEkX9Bo1r07L30XSuxU6nWW-Tt3x4BDstmrBM8gvo-kxxQbPvyPMeIUVctIYQUSSYRKb9PLQ3sXwcNDzDyRwUOTtRKrYUcS8HqK7tmj8mH9eNZ7HI7RO697JKrLW-POGkUf4i5V8Xy0hrQrEEDFPZvVPXXVBhRPcB1wINEWPFF2iiC7TjgeqFjGnIEdBiV-mzM8hOzdiHl7QSzW7Ercel-WvjFFxKA6tVZVWaWjn~BaImcXjjrQyEw__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+    <script>
+        
+       // Kisi => k1, k2
+       // Ogrenci => o1, o2
+       // Ogretmen
+
+       // parent
+       class Kisi {
+           constructor(ad, dogumYili) {
+                console.log("kisi constructor");
+                this.ad = ad;
+                this.dogumYili = dogumYili;
+           }
+
+           yasHesapla() {
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+           }
+
+           kendiniTanit() {
+               return `benim adım ${this.ad}`;
+           }
+       }
+
+       // child 
+       class Ogrenci extends Kisi {
+            constructor(ad, dogumYili, okulNumarasi) {
+                console.log("öğrenci constructor");
+                super(ad, dogumYili);
+                this.okulNumarasi = okulNumarasi;
+            }
+
+            dersCalis() {
+                return `${this.ad} ders çalışıyor.`;
+            }
+
+            kendiniTanit() {
+               return `benim adım ${this.ad} ve okul numaram ${this.okulNumarasi}`;
+            }
+       }
+
+       let kisi = new Kisi("ali", 1990);
+       let ogrenci = new Ogrenci("ahmet",2000, 123);
+
+    //    console.log(kisi.yasHesapla());
+    //    console.log(ogrenci.yasHesapla());
+    //    console.log(ogrenci.dersCalis());
+
+       console.log(kisi.kendiniTanit());
+       console.log(ogrenci.kendiniTanit());
+        
+    </script>
+</body>
+</html>

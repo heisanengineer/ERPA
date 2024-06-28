@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;type=content-script&amp;dmn=att-c.udemycdn.com&amp;url=https%3A%2F%2Fatt-c.udemycdn.com%2F2022-06-22_09-49-39-8828726a910a58efe5391501cf14e5ad%2Foriginal.html%3Fresponse-content-disposition%3Dattachment%253B%2Bfilename%253Dgetter-setter.html%26Expires%3D1719600221%26Signature%3DDdmVsmsxjqWQ-xDz0qCUirW7RH-wrkvI09JKaG4gZ9iUgtxtScNpV29AuBqGJrXGPCZiaCQ4t1Cjg7gd2vuiV6BKWK2eaKucRlz1yRuUdIfFriPqqKO5Gjh9ByGrjzMwOC-dEMBIFDK3qxTiHcw4xzyJVpa9aJSDrsJzDaTkcBE949zUhKQ1N3rYtbR8d4dRZjjbQ~76cD3C1iywEhhMMswciPkjy-5Z0w98NpdYSnYrGYAw6XQHC3F6uGjEfI3Qx2-ezGF7mbO7~buQF5eR7hEVPYBJwuFnihnt46HDftT7UO1~Lkxfah-aM8A8wJwR8rwFFGsY6NPVk6qEpo2POQ__%26Key-Pair-Id%3DK3MG148K9RIRF4&amp;app=com.apple.Safari&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="fcb353e15a374f9db7918e0bff7" src="//local.adguard.org?ts=1719562300221&amp;name=AdGuard%20Assistant&amp;name=AdGuard%20Popup%20Blocker&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    
+    <script>
+        
+        // class
+        class Kisi {
+            constructor(ad, meslek, dogumYili) {
+                this.ad = ad;
+                this.meslek = meslek;
+                this.dogumYili = dogumYili;
+            }
+
+            yasHesapla() {
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+
+            get ad() {
+                return this._ad;
+            }
+
+            set ad(value) {
+                if(value.length < 3) {
+                    console.log("ad için çok az karakter");
+                    return;
+                }
+                this._ad = value;
+            }
+
+            get dogumYili() {
+                return this._dogumYili;
+            }
+
+            set dogumYili(value) {
+                if (value < 1900 || value > new Date().getFullYear()) {
+                    console.log("tarih bilgisi yanlış")
+                    return;
+                }
+                this._dogumYili = value;
+            }
+        }
+
+        let kisi1 = new Kisi("çınar","öğrenci",2020);
+
+        console.log(kisi1);
+        console.log(kisi1.ad);
+        
+    </script>
+</body>
+</html>
